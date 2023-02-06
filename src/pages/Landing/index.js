@@ -1,0 +1,136 @@
+import React, { useRef, useEffect } from "react"
+import { useSelector } from "react-redux"
+import {
+  Brand,
+  Button,
+  CustomLink,
+  Page,
+  Paragraph,
+  Row,
+  Title
+} from "../../components/common"
+import {
+  AboutSection,
+  BottomSection,
+  Ellipse1,
+  Ellipse2,
+  Footer,
+  Hero,
+  NavBar,
+  ProductsSection
+} from "../../components/Landing"
+import { ReactComponent as Logo } from "../../assets/images/Logo.svg"
+import { useNavigate } from "react-router-dom"
+import SupportAndService from "../../components/common/SupportAndService/Index"
+
+export default function Landing() {
+  const navigate = useNavigate()
+
+  const aboutUsRef = useRef(null);
+
+  const loggedIn = useSelector(state => state.reducer.auth.loggedIn)
+
+  useEffect(() => {
+    if (loggedIn) {
+      navigate("/home")
+    }
+  }, [loggedIn, navigate])
+
+  const handleAboutUsClick = () => {
+    navigate('/about')
+  };
+
+  const handleHowItWorksClick = () => {
+    navigate('/how-it-works')
+  }
+
+  const handleProductsClick = () => {
+    navigate('/products')
+  }
+
+  return (
+    <Page height="">
+      <Ellipse1 />
+      <Ellipse2 />
+      <NavBar>
+        <Row link alignItems="center">
+          <Logo />
+          <Brand>S & S Vault</Brand>
+        </Row>
+        <Row margin="auto 0 auto 200px">
+          <Paragraph cursor={'pointer'} color="#022714" fontSize="18px" margin="auto 32px">
+            Home
+          </Paragraph>
+          <Paragraph onClick={handleAboutUsClick} cursor={'pointer'} color="#02271480" fontSize="18px" margin="auto 32px">
+            About us
+          </Paragraph>
+          <Paragraph onClick={handleProductsClick} cursor={'pointer'} color="#02271480" fontSize="18px" margin="auto 32px">
+            Products
+          </Paragraph>
+          <Paragraph onClick={handleHowItWorksClick} cursor={'pointer'} color="#02271480" fontSize="18px" margin="auto 32px">
+            How it works
+          </Paragraph>
+        </Row>
+        <Row>
+          <CustomLink
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center"
+            }}
+            to="/login"
+          >
+            <Paragraph color="#022714" fontSize="18px" margin="auto 32px">
+              Login
+            </Paragraph>
+          </CustomLink>
+          <CustomLink
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center"
+            }}
+            to="/signup"
+          >
+            <Button
+              color="#00A652"
+              width="104px"
+              height="48px"
+              borderRadius="8px"
+            >
+              Sign Up
+            </Button>
+          </CustomLink>
+        </Row>
+      </NavBar>
+      <Title fontWeight="700" fontSize="65px" margin="56px 0 10px 0">
+        Protecting Your Peace of Mind
+      </Title>
+      <Paragraph width="" color="#02271480" fontSize="20px" margin="0 0 21px 0">
+        Store and Share Vault is an encrypted cloud based software created as a safe space for
+        individuals to store all personal and sensitive information and have the ability to share them with
+        a loved one in the event that something happens to them.</Paragraph>
+      <Button
+        border
+        color="transparent"
+        textColor="#000"
+        borderRadius="10px"
+        width="171px"
+        height="56px"
+        margin="0 0 54px 0"
+        onClick={() => navigate("/welcome")}
+      >
+        Explore Now
+      </Button>
+      <Hero />
+
+      <AboutSection ref={aboutUsRef} />
+
+      <SupportAndService />
+      <ProductsSection />
+      <BottomSection />
+
+      <Footer>©2022 All Rights Reserved by S & S Vault</Footer>
+    </Page>
+  )
+}

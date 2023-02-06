@@ -1,0 +1,55 @@
+
+.selected-flag{
+  border:none!important;
+  outline: none!important;
+}
+.flag-dropdown{
+  border:none!important;
+  background-color: transparent!important;
+
+}
+.country-list {
+  width: 533px!important;
+  left: -463px!important;
+  margin-top: 17px!important;
+  font-family: TT Commons!important;
+  border-radius: 10px!important;
+  border: 1px solid #292D3233;
+  box-shadow: none!important;
+  border-top: none!important;
+  line-height: '26px'!important;
+}
+.react-tel-input .country-list .country .dial-code{
+  color: inherit!important;
+}
+ 
+.country.highlight{
+  background-color: #00A652!important;
+  color: white!important;
+}
+.search{
+  display: none!important;
+}
+.country-list li {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-family: TT Commons!important;
+  height:60px
+}
+.country-list li span:hover{
+  color: white!important;
+}
+.country-list li:hover{
+  background-color: #00A652!important;
+  color: white!important;
+}
+.country-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.country-list {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
