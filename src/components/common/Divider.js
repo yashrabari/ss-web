@@ -1,17 +1,17 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const Divider = styled.h1`
   font-family: "TT Commons";
   font-style: normal;
-  font-weight: ${props => (props.bold ? 600 : 400)};
+  font-weight: ${(props) => (props.bold ? 600 : 400)};
   font-size: 16px;
   line-height: 26px;
   text-align: center;
   max-width: 500px;
-  color: ${props => props.color ?? "rgba(0, 0, 0, 0.5)"};
+  color: ${(props) => props.color ?? "rgba(0, 0, 0, 0.5)"};
   margin: 0 auto;
   position: relative;
-  &:before: {
+  /* &:before {
     content: "";
     display: block;
     width: 120px;
@@ -21,7 +21,7 @@ const Divider = styled.h1`
     left: 0;
     top: 50%;
   }
-  &:after: {
+  &:after {
     content: "";
     display: block;
     width: 120px;
@@ -30,7 +30,11 @@ const Divider = styled.h1`
     position: absolute;
     right: 0;
     top: 50%;
+  } */
+  @media (max-width: 900px) {
+    font-size: 12px;
+    line-height: 20px;
   }
-`
+`;
 
-export default Divider
+export default Divider;

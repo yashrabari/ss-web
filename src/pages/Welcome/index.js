@@ -1,7 +1,7 @@
-import React from "react"
-import { landingImg } from "../../assets/images"
+import React from "react";
+import { landingImg } from "../../assets/images";
 
-import { ReactComponent as Logo } from "../../assets/images/Logo.svg"
+import { ReactComponent as Logo } from "../../assets/images/Logo.svg";
 import {
   Button,
   ButtonBar,
@@ -11,13 +11,13 @@ import {
   LogoContainer,
   Page,
   Paragraph,
-  Title
-} from "../../components/common"
+  Title,
+} from "../../components/common";
 
 export default function Welcome() {
   return (
     <Page>
-      <Container margin="100px" padding="70px" borderRadius="20px">
+      <Container margin="100px auto" padding="70px" borderRadius="20px">
         <Image src={landingImg} alt="Person looking through files" />
         <Title>Welcome to Store & Share Vault</Title>
         <Paragraph>
@@ -40,5 +40,5 @@ export default function Welcome() {
         </LogoContainer>
       </Container>
     </Page>
-  )
+  );
 }

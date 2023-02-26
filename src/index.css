@@ -92,3 +92,52 @@ input[type="file"] {
 .modal__close-btn:hover svg {
   opacity: 1;
 }
+
+p{
+  font-size: 16px;
+}
+
+.main_div {
+  padding: 80px;
+}
+
+@media (max-width:1200px){
+  .main_div {
+    padding: 40px 0;
+  }
+}
+  @media (max-width:800px){
+  .main_div {
+    padding: 40px 0;
+  }
+  p{
+    font-size: 14px;
+  }
+  .bold_p{
+    font-size: 16px !important;
+  }
+  .flex_column {
+    flex-direction: column !important;
+  }
+}
+@media (max-width:600px){
+  .main_div {
+    padding: 30px;
+  }
+
+}
+  @media (max-width:400px){
+  .main_div {
+    padding: 0px;
+  }
+  p{
+    font-size: 12px;
+  }
+  .bold_p{
+    font-size: 14px !important;
+  }
+  ol{
+    padding: 0 0 0 20px !important;
+  }
+}
+

@@ -1,11 +1,11 @@
-import React, { useState } from "react"
-import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5"
-import styled from "styled-components"
-import { Paragraph } from "."
-import CheckBox from "./CheckBox"
-import Image from "./Image"
-import Label from "./Label"
-import InputMask from 'react-input-mask';
+import React, { useState } from "react";
+import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
+import styled from "styled-components";
+import { Paragraph } from ".";
+import CheckBox from "./CheckBox";
+// import Image from "./Image";
+import Label from "./Label";
+import InputMask from "react-input-mask";
 
 const Row = styled.div`
   display: flex;
@@ -13,16 +13,16 @@ const Row = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 4px 0;
-`
+`;
 
 const Column = styled.div`
   display: flex;
   flex-direction: column;
   margin: 8px 0;
-`
+`;
 
 const Container = styled.div`
-  width: ${props => (props.width ? `${props.width}` : "512px")};
+  width: ${(props) => (props.width ? `${props.width}` : "512px")};
   height: 75px;
   background: #fff;
 
@@ -39,12 +39,36 @@ const Container = styled.div`
 
   padding: 0 10px;
 
-  ${props => (props.errorText ? "border-color:red" : "border-color:#292D3233")};
-  ${props =>
+  ${(props) =>
+    props.errorText ? "border-color:red" : "border-color:#292D3233"};
+  ${(props) =>
     props.isActive ? "border-color:#00A652;" : "border-color:#292D3233"}
 
   transition: 0.25s;
-`
+  @media (max-width: 1200px) {
+    height: 70px;
+    font-size: 15px;
+    line-height: 25px;
+    width: 500px;
+  }
+  @media (max-width: 900px) {
+    height: 65px;
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 8px;
+    width: 400px;
+  }
+  @media (max-width: 600px) {
+    height: 55px;
+    font-size: 12px;
+    line-height: 20px;
+    width: 300px;
+  }
+  @media (max-width: 400px) {
+    width: 220px;
+    height: 45px;
+  }
+`;
 
 const InputContainer = styled.div`
   display: flex;
@@ -52,7 +76,7 @@ const InputContainer = styled.div`
   flex: 1 0;
   align-items: center;
   min-width: 0;
-`
+`;
 
 const TextInput = styled.input`
   flex: 1 0;
@@ -65,7 +89,22 @@ const TextInput = styled.input`
   &:focus {
     outline: none;
   }
-`
+`;
+
+const Image = styled.img`
+  @media (max-width: 1200px) {
+    width: 50px;
+  }
+  @media (max-width: 900px) {
+    width: 45px;
+  }
+  @media (max-width: 600px) {
+    width: 40px;
+  }
+  @media (max-width: 400px) {
+    width: 35px;
+  }
+`;
 
 export default function InputGroup({
   errorText,
@@ -82,8 +121,8 @@ export default function InputGroup({
   width,
   inputMask,
 }) {
-  const [isActive, setIsActive] = useState(false)
-  const [currentType, setCurrentType] = useState(type)
+  const [isActive, setIsActive] = useState(false);
+  const [currentType, setCurrentType] = useState(type);
 
   return (
     <Column>
@@ -99,14 +138,21 @@ export default function InputGroup({
         <InputContainer>
           {imageSrc && <Image width="57px" src={imageSrc} />}
           {inputMask ? (
-            <InputMask mask={inputMask} value={value} onChange={onChange} disabled={disabled} onFocus={() => setIsActive(true)} onBlur={() => setIsActive(false)}>
-              {(inputProps) =>
+            <InputMask
+              mask={inputMask}
+              value={value}
+              onChange={onChange}
+              disabled={disabled}
+              onFocus={() => setIsActive(true)}
+              onBlur={() => setIsActive(false)}
+            >
+              {(inputProps) => (
                 <TextInput
                   {...inputProps}
                   placeholder={placeholder}
-                  type={'tel'}
+                  type={"tel"}
                 />
-              }
+              )}
             </InputMask>
           ) : (
             <TextInput
@@ -148,5 +194,5 @@ export default function InputGroup({
         )}
       </Row>
     </Column>
-  )
+  );
 }
