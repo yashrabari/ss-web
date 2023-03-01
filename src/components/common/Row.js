@@ -9,6 +9,7 @@ const Row = styled.div`
   padding: ${(props) => props.padding};
   width: ${(props) => props.width};
   margin: ${(props) => props.margin};
+  gap: ${(props) => props.gap};
   ${(props) => props.link && "cursor:pointer;"}
 
   @media (max-width:400px) {

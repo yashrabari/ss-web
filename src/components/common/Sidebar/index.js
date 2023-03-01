@@ -1,34 +1,39 @@
-import React from "react"
-import { useDispatch } from "react-redux"
-import { useLocation, useNavigate } from "react-router-dom"
-import { ReactComponent as Logo } from "../../../assets/images/Logo.svg"
-import { logout } from "../../../store/actions/auth"
-import Brand from "../Brand"
-import SidebarItem from "./SidebarItem"
-import { IoLogOutOutline } from "react-icons/io5"
-import routes from "./routes"
-import SidebarContainer from "./SidebarContainer"
+import React from "react";
+import { useDispatch } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
+import { ReactComponent as Logo } from "../../../assets/images/Logo.svg";
+import { logout } from "../../../store/actions/auth";
+import Brand from "../Brand";
+import SidebarItem from "./SidebarItem";
+import { IoLogOutOutline } from "react-icons/io5";
+import routes from "./routes";
+import SidebarContainer from "./SidebarContainer";
+import useDevice from "../../../utils/hook/mediaQuery";
 
 export default function Sidebar() {
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
-  const location = useLocation()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { isTablet } = useDevice();
 
   const handleLogout = () => {
-    dispatch(logout())
-    navigate("/")
-  }
+    dispatch(logout());
+    navigate("/");
+  };
 
   return (
     <SidebarContainer>
       <div
         style={{
           display: "flex",
-          alignItems: "center"
+          alignItems: "center",
+          alignSelf: "start",
+          // margin: "56px 0 auto 0",
+          overflow: "hidden",
         }}
       >
-        <Logo />
-        <Brand>S & S Vault</Brand>
+        <Logo className="logo_width" />
+        {!isTablet && <Brand>S & S Vault</Brand>}
       </div>
       <div
         style={{
@@ -36,7 +41,8 @@ export default function Sidebar() {
           flexDirection: "column",
           alignItems: "start",
           alignSelf: "start",
-          margin: "56px 0 auto 0"
+          margin: "56px 0 auto 0",
+          overflow: "hidden",
         }}
       >
         {routes.map((route, index) => (
@@ -47,11 +53,22 @@ export default function Sidebar() {
           />
         ))}
       </div>
-      <SidebarItem
-        name="Logout"
-        Icon={IoLogOutOutline}
-        onClick={handleLogout}
-      />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "start",
+          alignSelf: "start",
+          margin: "auto 0 0",
+          overflow: "hidden",
+        }}
+      >
+        <SidebarItem
+          name="Logout"
+          Icon={IoLogOutOutline}
+          onClick={handleLogout}
+        />
+      </div>
     </SidebarContainer>
-  )
+  );
 }
