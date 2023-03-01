@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const Section = styled.section`
   position: relative;
@@ -7,11 +7,18 @@ const Section = styled.section`
   width: 100%;
   height: fit-content;
   background: transparent;
-  padding: 80px 0;
+  padding: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-`
 
-export default Section
+  @media (max-width: 1000px) {
+    padding: 50px;
+  }
+  @media (max-width: 600px) {
+    padding: 30px;
+  }
+`;
+
+export default Section;

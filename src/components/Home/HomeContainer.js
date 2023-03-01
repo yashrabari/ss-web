@@ -1,24 +1,27 @@
-import React from "react"
-import styled from "styled-components"
-import Paragraph from "../common/Paragraph"
-import Title from "../common/Title"
+import React from "react";
+import styled from "styled-components";
+import Paragraph from "../common/Paragraph";
+import Title from "../common/Title";
 
 const Container = styled.div`
   position: relative;
-  width: ${props => props.width};
-  height: ${props => props.height};
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
 
   background: #ffffff;
   border-radius: 10px;
 
   display: flex;
   flex-direction: column;
-  justify-content: ${props => props.justifyContent ?? "flex-start"};
-  align-items: ${props => props.alignItems ?? "center"};
-  padding: ${props => props.padding ?? "0"};
+  justify-content: ${(props) => props.justifyContent ?? "flex-start"};
+  align-items: ${(props) => props.alignItems ?? "center"};
+  padding: ${(props) => props.padding ?? "0"};
   box-sizing: border-box;
   margin: 12px 0 12px 0;
-`
+  @media (max-width: 800px) {
+    width: 100% !important;
+  }
+`;
 
 const Header = styled.div`
   width: 100%;
@@ -29,7 +32,7 @@ const Header = styled.div`
   padding: 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
-`
+`;
 
 export default function HomeContainer({
   width,
@@ -40,7 +43,7 @@ export default function HomeContainer({
   justifyContent,
   alignItems,
   padding,
-  style={}
+  style = {},
 }) {
   return (
     <Container
@@ -61,5 +64,5 @@ export default function HomeContainer({
       )}
       {children}
     </Container>
-  )
+  );
 }
