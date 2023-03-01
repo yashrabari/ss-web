@@ -65,7 +65,7 @@ const Container = styled.div`
     width: 300px;
   }
   @media (max-width: 400px) {
-    width: 220px;
+    width: 93%;
     height: 45px;
   }
 `;

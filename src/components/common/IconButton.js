@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const IconButton = styled.div`
   width: 64px;
@@ -6,12 +6,30 @@ const IconButton = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   margin: 5px;
-  background-color: ${props => props.backgroundColor ? props.backgroundColor : ''};
+  background-color: ${(props) =>
+    props.backgroundColor ? props.backgroundColor : ""};
 
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-`
 
-export default IconButton
+  @media (max-width: 1000px) {
+    width: 60px;
+    height: 60px;
+  }
+  @media (max-width: 800px) {
+    width: 50px;
+    height: 50px;
+  }
+  @media (max-width: 600px) {
+    width: 40px;
+    height: 40px;
+  }
+  @media (max-width: 400px) {
+    width: 35px;
+    height: 35px;
+  }
+`;
+
+export default IconButton;

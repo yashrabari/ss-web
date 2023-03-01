@@ -9,7 +9,7 @@ const Container = styled.div`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
 
-  background: #ffffff;
+  background: ${(props) => props.background ?? "#ffffff"};
   border-radius: ${(props) => props.borderRadius ?? "10px"};
 
   margin: ${(props) => props.margin ?? "0"};
