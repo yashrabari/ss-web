@@ -9,7 +9,7 @@ import {
 } from "../../../../assets/images";
 import {
   Back,
-  Column,
+  // Column,
   Container,
   IconButton,
   // Image,
@@ -46,14 +46,10 @@ const Row = styled.div`
   width: ${(props) => props.width};
   margin: ${(props) => props.margin};
   ${(props) => props.link && "cursor:pointer;"}
-
-  @media (max-width:400px) {
-    width: -webkit-fill-available !important;
-  }
 `;
 
-/*const Column = styled.div`
-   display: flex;
+const Column = styled.div`
+  display: flex;
   flex-direction: column;
   justify-content: ${(props) => props.justifyContent};
   height: ${(props) => props.height ?? "100%"};
@@ -67,10 +63,9 @@ const Row = styled.div`
   ${(props) =>
     props.hideScrollBar ? "::-webkit-scrollbar {display: none;}" : ""};
 
-    @media (max-width:400px) {
-      
-    }
-`; */
+  @media (max-width: 400px) {
+  }
+`;
 
 export default function About() {
   const navigate = useNavigate();
@@ -85,9 +80,10 @@ export default function About() {
         padding="24px 0"
         alignItems="center"
         justifyContent="space-between"
+        className="pb-0"
       >
         <BackTransactions />
-        <Title margin="0px 0px 0px 80px">About Us</Title>
+        <Title margin="8px 0px 0px 60px">About Us</Title>
 
         <Row>
           <OptionMenuSettings
@@ -220,7 +216,7 @@ const AboutContainer = () => {
             />
           </Row>
           <Row width="100%" justifyContent="space-between">
-            <Column padding="0 10px 0 0" width="40%">
+            <Column padding="0 10px 0 0" width="40%" className="p-0">
               <Image
                 src={signingImg}
                 borderRadius="10px"

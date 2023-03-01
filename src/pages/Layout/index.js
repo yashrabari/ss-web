@@ -1,6 +1,6 @@
-import React from "react"
-import { Outlet } from "react-router-dom"
-import { Column, Page, Sidebar } from "../../components/common"
+import React from "react";
+import { Outlet } from "react-router-dom";
+import { Column, Page, Sidebar } from "../../components/common";
 
 export default function index() {
   return (
@@ -10,5 +10,5 @@ export default function index() {
         <Outlet />
       </Column>
     </Page>
-  )
+  );
 }
