@@ -1,15 +1,15 @@
-import React from "react"
-import styled from "styled-components"
-import { Paragraph } from "../common"
-import { IoAddCircleOutline } from "react-icons/io5"
+import React from "react";
+import styled from "styled-components";
+import { Paragraph } from "../common";
+import { IoAddCircleOutline } from "react-icons/io5";
 
 const NewFolderContainer = styled.div`
-  position: absolute;
+  /* position: absolute;
   left: 358px;
-  top: 210px;
+  top: 210px; */
   width: 155px;
   height: 119px;
-
+  margin: auto;
   background: rgba(0, 166, 82, 0.05);
   border: 1px solid rgba(0, 166, 82, 0.1);
   box-sizing: border-box;
@@ -21,7 +21,7 @@ const NewFolderContainer = styled.div`
   align-items: center;
 
   cursor: pointer;
-`
+`;
 
 const IconContainer = styled.div`
   width: 40px;
@@ -31,7 +31,7 @@ const IconContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 
 const Upload = styled.label`
   width: 100%;
@@ -41,7 +41,7 @@ const Upload = styled.label`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-`
+`;
 
 export default function NewFolder({ setopen, onClick, onChange }) {
   return (
@@ -56,5 +56,5 @@ export default function NewFolder({ setopen, onClick, onChange }) {
         </Paragraph>
       </Upload>
     </NewFolderContainer>
-  )
+  );
 }

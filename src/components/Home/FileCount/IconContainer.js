@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const IconContainer = styled.div`
   position: absolute;
@@ -14,6 +14,21 @@ const IconContainer = styled.div`
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-`
 
-export default IconContainer
+  @media (max-width: 1400px) {
+    left: 110px;
+  }
+  @media (max-width: 1300px) {
+    left: 100px;
+    top: 10px;
+  }
+  @media (max-width: 1200px) {
+    left: 90px;
+    top: 10px;
+  }
+  @media (max-width: 1100px) {
+    left: 60px;
+  }
+`;
+
+export default IconContainer;

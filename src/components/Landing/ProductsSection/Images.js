@@ -1,14 +1,21 @@
-import React from "react"
-import styled from "styled-components"
-import { addBuddyImg, myBuddiesImg, packagesImg } from "../../../assets/images"
+import React from "react";
+import styled from "styled-components";
+import { addBuddyImg, myBuddiesImg, packagesImg } from "../../../assets/images";
 
 const Container = styled.div`
-  width: 1440px;
+  width: 100%;
   height: 700px;
   position: relative;
   overflow: hidden;
   margin: 0 auto;
-`
+
+  @media (max-width: 800px) {
+    height: 263px;
+  }
+  @media (max-width: 400px) {
+    height: 163px;
+  }
+`;
 
 const Packages1 = styled.div`
   position: absolute;
@@ -22,7 +29,24 @@ const Packages1 = styled.div`
   background-size: contain;
   border: 3px solid #292d32;
   border-radius: 10px;
-`
+
+  @media (max-width: 800px) {
+    border: 1px solid #292d32;
+    width: 250px;
+    height: 208px;
+    left: -75px;
+    top: -45px;
+  }
+  @media (max-width: 400px) {
+    width: 150px;
+    height: 108px;
+    left: -75px;
+    top: -45px;
+  }
+  @media (max-width: 370px) {
+    left: -95px;
+  }
+`;
 
 const Packages2 = styled.div`
   position: absolute;
@@ -36,7 +60,23 @@ const Packages2 = styled.div`
   background-size: contain;
   border: 3px solid #292d32;
   border-radius: 10px;
-`
+  @media (max-width: 800px) {
+    border: 1px solid #292d32;
+    width: 250px;
+    height: 208px;
+    left: 80px;
+    top: -30px;
+  }
+  @media (max-width: 400px) {
+    width: 150px;
+    height: 108px;
+    left: 80px;
+    top: -30px;
+  }
+  @media (max-width: 370px) {
+    left: 60px;
+  }
+`;
 
 const Packages3 = styled.div`
   position: absolute;
@@ -50,7 +90,23 @@ const Packages3 = styled.div`
   background-size: contain;
   border: 3px solid #292d32;
   border-radius: 10px;
-`
+  @media (max-width: 800px) {
+    border: 1px solid #292d32;
+    width: 250px;
+    height: 208px;
+    left: 235px;
+    top: -10px;
+  }
+  @media (max-width: 400px) {
+    width: 150px;
+    height: 108px;
+    left: 235px;
+    top: -10px;
+  }
+  @media (max-width: 370px) {
+    left: 215px;
+  }
+`;
 
 const AddBuddy1 = styled.div`
   position: absolute;
@@ -64,7 +120,23 @@ const AddBuddy1 = styled.div`
   background-size: contain;
   border: 3px solid #292d32;
   border-radius: 10px;
-`
+  @media (max-width: 800px) {
+    border: 1px solid #292d32;
+    width: 250px;
+    height: 208px;
+    left: -75px;
+    top: 68px;
+  }
+  @media (max-width: 400px) {
+    width: 150px;
+    height: 108px;
+    left: -75px;
+    top: 68px;
+  }
+  @media (max-width: 370px) {
+    left: -95px;
+  }
+`;
 
 const AddBuddy2 = styled.div`
   position: absolute;
@@ -78,7 +150,23 @@ const AddBuddy2 = styled.div`
   background-size: contain;
   border: 3px solid #292d32;
   border-radius: 10px;
-`
+  @media (max-width: 800px) {
+    border: 1px solid #292d32;
+    width: 250px;
+    height: 208px;
+    left: 80px;
+    top: 83px;
+  }
+  @media (max-width: 400px) {
+    width: 150px;
+    height: 108px;
+    left: 80px;
+    top: 83px;
+  }
+  @media (max-width: 370px) {
+    left: 60px;
+  }
+`;
 
 const MyBuddies = styled.div`
   position: absolute;
@@ -92,7 +180,23 @@ const MyBuddies = styled.div`
   background-size: contain;
   border: 3px solid #292d32;
   border-radius: 10px;
-`
+  @media (max-width: 800px) {
+    border: 1px solid #292d32;
+    width: 250px;
+    height: 208px;
+    left: 235px;
+    top: 103px;
+  }
+  @media (max-width: 400px) {
+    width: 150px;
+    height: 108px;
+    left: 235px;
+    top: 103px;
+  }
+  @media (max-width: 370px) {
+    left: 215px;
+  }
+`;
 
 export default function Images() {
   return (
@@ -104,5 +208,5 @@ export default function Images() {
       <AddBuddy1 />
       <AddBuddy2 />
     </Container>
-  )
+  );
 }

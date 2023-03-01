@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const Container = styled.div`
   box-sizing: border-box;
@@ -15,6 +15,10 @@ const Container = styled.div`
   align-items: center;
 
   cursor: pointer;
-`
 
-export default Container
+  @media (max-width: 500px) {
+    width: 120px;
+  }
+`;
+
+export default Container;
