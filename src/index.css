@@ -239,3 +239,20 @@ white-space: nowrap;
     width: -webkit-fill-available !important ;
   }
 }
+.block {
+  display: none !important;
+}
+.width-0 {
+  width: unset !important;
+}
+@media(max-width:991px){
+  .none{
+    display: none !important;
+  }
+  .block {
+    display: block !important;
+  }
+}
+.offcanvas.offcanvas-start.show {
+  width: 300px ;
+}

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Row = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: ${(props) => props.flexDirection ?? "row"};
   justify-content: ${(props) => props.justifyContent};
   align-items: ${(props) => props.alignItems};
   height: ${(props) => props.height};
@@ -13,7 +13,7 @@ const Row = styled.div`
   ${(props) => props.link && "cursor:pointer;"}
 
   @media (max-width:400px) {
-    width: 245px !important;
+    width: 245px;
   }
 `;
 

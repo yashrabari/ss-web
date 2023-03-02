@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import {
   Brand,
@@ -23,8 +23,9 @@ import {
 import { ReactComponent as Logo } from "../../assets/images/Logo.svg";
 import { useNavigate } from "react-router-dom";
 import SupportAndService from "../../components/common/SupportAndService/Index";
-// import { Container } from "@mui/system";
-
+import { ImMenu } from "react-icons/im";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import "bootstrap/dist/css/bootstrap.min.css";
 export default function Landing() {
   const navigate = useNavigate();
 
@@ -50,6 +51,10 @@ export default function Landing() {
     navigate("/products");
   };
 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <Page height="">
       {/* <Ellipse1 /> */}
@@ -59,12 +64,12 @@ export default function Landing() {
           <Logo />
           <Brand>S & S Vault</Brand>
         </Row>
-        <Row margin="auto 0 auto 200px">
+        <Row margin="" className="none">
           <Paragraph
             cursor={"pointer"}
             color="#022714"
             fontSize="18px"
-            margin="auto 32px"
+            margin="auto 20px"
           >
             Home
           </Paragraph>
@@ -73,7 +78,7 @@ export default function Landing() {
             cursor={"pointer"}
             color="#02271480"
             fontSize="18px"
-            margin="auto 32px"
+            margin="auto 20px"
           >
             About us
           </Paragraph>
@@ -82,7 +87,7 @@ export default function Landing() {
             cursor={"pointer"}
             color="#02271480"
             fontSize="18px"
-            margin="auto 32px"
+            margin="auto 20px"
           >
             Products
           </Paragraph>
@@ -91,12 +96,10 @@ export default function Landing() {
             cursor={"pointer"}
             color="#02271480"
             fontSize="18px"
-            margin="auto 32px"
+            margin="auto 20px"
           >
             How it works
           </Paragraph>
-        </Row>
-        <Row>
           <CustomLink
             style={{
               display: "flex",
@@ -105,7 +108,7 @@ export default function Landing() {
             }}
             to="/login"
           >
-            <Paragraph color="#022714" fontSize="18px" margin="auto 32px">
+            <Paragraph color="#022714" fontSize="18px" margin="auto 20px">
               Login
             </Paragraph>
           </CustomLink>
@@ -127,8 +130,94 @@ export default function Landing() {
             </Button>
           </CustomLink>
         </Row>
+        <Row className="block width-0">
+          <ImMenu onClick={handleShow} />
+          <Offcanvas show={show} onHide={handleClose}>
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title>
+                <Row link alignItems="center">
+                  <Logo />
+                  <Brand>S & S Vault</Brand>
+                </Row>
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+              <Row
+                margin=""
+                flexDirection="column"
+                alignItems="start"
+                gap="10px"
+              >
+                <Paragraph
+                  cursor={"pointer"}
+                  color="#022714"
+                  fontSize="18px"
+                  margin="auto 20px"
+                >
+                  Home
+                </Paragraph>
+                <Paragraph
+                  onClick={handleAboutUsClick}
+                  cursor={"pointer"}
+                  color="#02271480"
+                  fontSize="18px"
+                  margin="auto 20px"
+                >
+                  About us
+                </Paragraph>
+                <Paragraph
+                  onClick={handleProductsClick}
+                  cursor={"pointer"}
+                  color="#02271480"
+                  fontSize="18px"
+                  margin="auto 20px"
+                >
+                  Products
+                </Paragraph>
+                <Paragraph
+                  onClick={handleHowItWorksClick}
+                  cursor={"pointer"}
+                  color="#02271480"
+                  fontSize="18px"
+                  margin="auto 20px"
+                >
+                  How it works
+                </Paragraph>
+                <CustomLink
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                  to="/login"
+                >
+                  <Paragraph color="#022714" fontSize="18px" margin="auto 20px">
+                    Login
+                  </Paragraph>
+                </CustomLink>
+                <CustomLink
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                  to="/signup"
+                >
+                  <Button
+                    color="#00A652"
+                    width="104px"
+                    height="48px"
+                    borderRadius="8px"
+                  >
+                    Sign Up
+                  </Button>
+                </CustomLink>
+              </Row>
+            </Offcanvas.Body>
+          </Offcanvas>
+        </Row>
       </NavBar>
-      <Container background="transparent">
+      <Container background="transparent" margin="50px 100px">
         <Title fontWeight="700" fontSize="65px">
           Protecting Your Peace of Mind
         </Title>

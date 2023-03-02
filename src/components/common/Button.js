@@ -23,7 +23,7 @@ const Button = styled.button`
   cursor: pointer;
 
   @media (max-width: 1200px) {
-    width: 200px;
+    width: 180px;
     height: 50px;
     font-size: 17px;
   }

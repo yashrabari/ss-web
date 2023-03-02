@@ -31,11 +31,11 @@ const Packages1 = styled.div`
   border-radius: 10px;
 
   @media (max-width: 800px) {
-    border: 1px solid #292d32;
+    border: 2px solid #292d32;
     width: 250px;
     height: 208px;
-    left: -75px;
-    top: -45px;
+    left: -58px;
+    top: -65px;
   }
   @media (max-width: 400px) {
     width: 150px;
@@ -61,11 +61,11 @@ const Packages2 = styled.div`
   border: 3px solid #292d32;
   border-radius: 10px;
   @media (max-width: 800px) {
-    border: 1px solid #292d32;
+    border: 2px solid #292d32;
     width: 250px;
     height: 208px;
-    left: 80px;
-    top: -30px;
+    left: 200px;
+    top: -50px;
   }
   @media (max-width: 400px) {
     width: 150px;
@@ -91,11 +91,11 @@ const Packages3 = styled.div`
   border: 3px solid #292d32;
   border-radius: 10px;
   @media (max-width: 800px) {
-    border: 1px solid #292d32;
+    border: 2px solid #292d32;
     width: 250px;
     height: 208px;
-    left: 235px;
-    top: -10px;
+    left: 458px;
+    top: -30px;
   }
   @media (max-width: 400px) {
     width: 150px;
@@ -121,11 +121,11 @@ const AddBuddy1 = styled.div`
   border: 3px solid #292d32;
   border-radius: 10px;
   @media (max-width: 800px) {
-    border: 1px solid #292d32;
+    border: 2px solid #292d32;
     width: 250px;
     height: 208px;
-    left: -75px;
-    top: 68px;
+    left: -58px;
+    top: 150px;
   }
   @media (max-width: 400px) {
     width: 150px;
@@ -151,11 +151,11 @@ const AddBuddy2 = styled.div`
   border: 3px solid #292d32;
   border-radius: 10px;
   @media (max-width: 800px) {
-    border: 1px solid #292d32;
+    border: 2px solid #292d32;
     width: 250px;
     height: 208px;
-    left: 80px;
-    top: 83px;
+    left: 200px;
+    top: 165px;
   }
   @media (max-width: 400px) {
     width: 150px;
@@ -181,11 +181,11 @@ const MyBuddies = styled.div`
   border: 3px solid #292d32;
   border-radius: 10px;
   @media (max-width: 800px) {
-    border: 1px solid #292d32;
+    border: 2px solid #292d32;
     width: 250px;
     height: 208px;
-    left: 235px;
-    top: 103px;
+    left: 458px;
+    top: 185px;
   }
   @media (max-width: 400px) {
     width: 150px;

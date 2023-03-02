@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const NavBar = styled.nav`
   box-sizing: border-box;
@@ -11,6 +11,14 @@ const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`
 
-export default NavBar
+  @media (max-width: 1100px) {
+    padding: 20px 50px;
+  }
+
+  @media (max-width: 500px) {
+    padding: 20px;
+  }
+`;
+
+export default NavBar;

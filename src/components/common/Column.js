@@ -30,6 +30,9 @@ const Column = styled.div`
     width: 79%;
     margin: 0 10px;
   }
+  @media (max-width: 400px) {
+    width: 85%;
+  }
 `;
 
 export default Column;

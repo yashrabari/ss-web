@@ -13,7 +13,7 @@ const Page = styled.div`
   overflow: ${(props) => props.overflow ?? "auto"};
   position: relative;
   width: 100%;
-  overflow-y: hidden;
+  overflow-y: auto;
 `;
 
 export default Page;
