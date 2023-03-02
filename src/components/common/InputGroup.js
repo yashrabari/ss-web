@@ -6,6 +6,7 @@ import CheckBox from "./CheckBox";
 // import Image from "./Image";
 import Label from "./Label";
 import InputMask from "react-input-mask";
+import { useLocation } from "react-router-dom";
 
 const Row = styled.div`
   display: flex;
@@ -19,6 +20,10 @@ const Column = styled.div`
   display: flex;
   flex-direction: column;
   margin: 8px 0;
+
+  @media (max-width: 500px) {
+    margin: 0;
+  }
 `;
 
 const Container = styled.div`
@@ -65,8 +70,11 @@ const Container = styled.div`
     width: 300px;
   }
   @media (max-width: 400px) {
-    width: 93%;
+    width: ${(props) => props.mediaWidth};
     height: 45px;
+  }
+  @media (max-width: 350px) {
+    width: ${(props) => props.mediaWidth};
   }
 `;
 
@@ -123,6 +131,7 @@ export default function InputGroup({
 }) {
   const [isActive, setIsActive] = useState(false);
   const [currentType, setCurrentType] = useState(type);
+  const location = useLocation();
 
   return (
     <Column>
@@ -134,7 +143,19 @@ export default function InputGroup({
           </Paragraph>
         )}
       </Row>
-      <Container width={width} errorText={errorText} isActive={isActive}>
+      <Container
+        width={width}
+        errorText={errorText}
+        isActive={isActive}
+        mediaWidth={
+          location.pathname === "/login" ||
+          location.pathname === "/signup" ||
+          location.pathname === "/change-password" ||
+          location.pathname === "/send-email"
+            ? "200px"
+            : "90%"
+        }
+      >
         <InputContainer>
           {imageSrc && <Image width="57px" src={imageSrc} />}
           {inputMask ? (

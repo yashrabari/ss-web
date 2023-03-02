@@ -31,7 +31,7 @@ const Column = styled.div`
     margin: 0 10px;
   }
   @media (max-width: 400px) {
-    width: 85%;
+    width: 80%;
   }
 `;
 

@@ -309,7 +309,7 @@ export default function Signup() {
             type="password"
             imageSrc={passwordImg}
           />
-          <Row width="-webkit-fill-available">
+          <Row width="-webkit-fill-available" className="w-200">
             <Label>Phone Number</Label>
           </Row>
           <PhoneInput

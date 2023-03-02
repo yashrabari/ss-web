@@ -5,6 +5,7 @@ const Title = styled.p`
   font-family: "TT Commons";
   font-style: normal;
   font-weight: ${(props) => props.fontWeight ?? "600"};
+  line-height: ${(props) => props.lineHeight ?? "auto"};
   font-size: ${(props) => props.fontSize ?? "32px"};
   text-align: ${(props) => props.textAlign ?? "center"};
   color: "#00000";

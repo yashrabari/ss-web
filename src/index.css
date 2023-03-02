@@ -252,7 +252,27 @@ white-space: nowrap;
   .block {
     display: block !important;
   }
+  .marginx-20 {
+    margin: 0px !important;
+  }
 }
 .offcanvas.offcanvas-start.show {
   width: 300px ;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (max-width:800px) {
+  .welcome_flex {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+  .welcome_flex .title {
+    margin-bottom: 0 !important;
+  }
 }

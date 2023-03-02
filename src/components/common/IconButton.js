@@ -5,7 +5,7 @@ const IconButton = styled.div`
   height: 56px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  margin: 5px;
+  margin: 10px 5px;
   background-color: ${(props) =>
     props.backgroundColor ? props.backgroundColor : ""};
 

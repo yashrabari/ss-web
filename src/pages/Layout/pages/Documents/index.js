@@ -143,7 +143,6 @@ export default function Documents() {
               },
             ]}
           />
-
           <IconButton
             onClick={() => {
               navigate("/home/notifications");
@@ -189,7 +188,7 @@ export default function Documents() {
                   src={File}
                 />
               </div>
-              <div>
+              <div className="text-center">
                 <h1
                   style={{
                     fontFamily: "TT Commons",
@@ -326,8 +325,8 @@ export default function Documents() {
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
       >
-        <Box style={style}>
-          <Title fontWeight="700" margin="16px 0">
+        <Box style={style} className="modal">
+          <Title fontWeight="700" margin="16px auto 0 25px">
             Create New Folder
           </Title>
           <CrossOutline

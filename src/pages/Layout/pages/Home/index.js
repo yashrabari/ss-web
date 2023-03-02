@@ -236,9 +236,11 @@ export default function Home() {
         justifyContent="space-between"
         className="flex_column"
       >
-        <div>
+        <div className="welcome_flex">
           <Paragraph color="#000">Welcome, 👋</Paragraph>
-          <Title>{user?.name ? user?.name : "Antor P."}</Title>
+          <Title className="title">
+            {user?.name ? user?.name : "Antor P."}
+          </Title>
         </div>
 
         <Row>
@@ -597,7 +599,8 @@ export default function Home() {
                 <Title
                   textAlign="left"
                   fontSize="26px"
-                  style={{ width: "70%", color: "#FFFFFF", lineHeight: "36px" }}
+                  lineHeight=""
+                  style={{ width: "100%", color: "#FFFFFF" }}
                 >
                   Keep your Files Secured and share with the person you want
                 </Title>
@@ -751,7 +754,7 @@ export default function Home() {
         aria-describedby="simple-modal-description"
       >
         <Box style={style} className="modal">
-          <Title fontSize="1.7rem" fontWeight="700" margin="22px 0">
+          <Title fontSize="1.7rem" fontWeight="700" margin="16px auto 0 25px">
             Create New Folder
           </Title>
           <CrossOutline

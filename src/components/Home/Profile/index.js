@@ -2,7 +2,33 @@ import React from "react";
 import { IoChevronForward } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { Image, Paragraph } from "../../common";
-import Container from "./Container";
+import styled from "styled-components";
+
+const Container = styled.div`
+  box-sizing: border-box;
+  padding: 10px;
+  width: 180px;
+  height: 60px;
+  margin: auto 0 auto 10px;
+
+  background: #ffffff;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  cursor: pointer;
+  @media (max-width: 800px) {
+    height: 56px;
+  }
+  @media (max-width: 600px) {
+    height: 45px;
+  }
+  @media (max-width: 500px) {
+    width: 120px;
+  }
+`;
 
 export default function Profile({ user }) {
   const navigate = useNavigate();

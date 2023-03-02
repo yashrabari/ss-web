@@ -217,7 +217,11 @@ export default function Landing() {
           </Offcanvas>
         </Row>
       </NavBar>
-      <Container background="transparent" margin="50px 100px">
+      <Container
+        background="transparent"
+        margin="50px 100px"
+        className="marginx-20"
+      >
         <Title fontWeight="700" fontSize="65px">
           Protecting Your Peace of Mind
         </Title>
