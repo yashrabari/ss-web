@@ -43,9 +43,9 @@ import { useLoginWithAppleMutation } from "../../store/slice/api";
 import { useGoogleLogin } from "@react-oauth/google";
 
 const Image = styled.img`
-  @media (max-width: 900px) {
+  /* @media (max-width: 900px) {
     width: 20px;
-  }
+  } */
 `;
 const Button = styled.button`
   width: ${(props) => props.width ?? "154px"};
@@ -80,13 +80,13 @@ const Button = styled.button`
     font-size: 15px;
   }
   @media (max-width: 600px) {
-    width: 80px;
+    width: 90px;
     height: 40px;
     font-size: 12px;
     margin: 0 4px;
   }
-  @media (max-width: 400px) {
-    width: 70px;
+  @media (max-width: 375px) {
+    width: 85px;
     height: 37px;
     font-size: 11px;
   }
@@ -300,7 +300,7 @@ export default function Login() {
           >
             <Image
               margin="8px -14px 0 -15px"
-              width="80px"
+              width="36px"
               src={googleImg}
               alt="Google logo"
             />
@@ -319,8 +319,8 @@ export default function Login() {
                   textColor: "#000",
                 }}
               >
-                <Image width="26px" src={facebookImg} alt="Facebook logo" />{" "}
-                Facebook
+                <Image width="22px" src={facebookImg} alt="Facebook logo" />
+                &nbsp; Facebook
               </Button>
             )}
           />
@@ -341,10 +341,10 @@ export default function Login() {
             }
             skipScript={false}
             render={(props) => (
-              <Button {...props} color="#fff" width="154px" textColor="#000">
+              <Button {...props} color="#fff" textColor="#000">
                 <Image
                   margin="4px -10px 0 -15px"
-                  width="70px"
+                  width="36px"
                   src={appleImg}
                   alt="Apple logo"
                 />{" "}

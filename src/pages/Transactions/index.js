@@ -114,8 +114,6 @@ const Transactions = () => {
         </Paragraph>
         <Button
           margin="8px 0px 8px 0px "
-          width="200px"
-          height="46px"
           color="#00A652"
           onClick={() => {
             navigate("/home/transactions/addPaymentMethod");
@@ -197,8 +195,6 @@ const Transactions = () => {
       <Row justifyContent="flex-start" alignItems="center">
         <Button
           margin="8px 0px 0px 0px "
-          width="300px"
-          height="46px"
           color="#00A652"
           onClick={() => {
             navigate("/home/transactions/payment-history");
@@ -208,8 +204,6 @@ const Transactions = () => {
         </Button>
         <Button
           margin="8px 0px 0px 8px "
-          width="300px"
-          height="46px"
           color="#FBBC05"
           onClick={() => {
             navigate("/subscriptions");

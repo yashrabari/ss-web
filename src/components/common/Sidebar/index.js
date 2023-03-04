@@ -33,7 +33,7 @@ export default function Sidebar() {
         }}
       >
         <Logo className="logo_width" />
-        {!isTablet && <Brand>S & S Vault</Brand>}
+        <Brand>S & S Vault</Brand>
       </div>
       <div
         style={{

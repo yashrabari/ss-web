@@ -783,12 +783,7 @@ export default function Home() {
             />
 
             <Row justifyContent="flex-end">
-              <Button
-                width="151px"
-                height="50px"
-                color="#00A652"
-                onClick={HandleCreateFolder}
-              >
+              <Button color="#00A652" onClick={HandleCreateFolder}>
                 Create
               </Button>
             </Row>

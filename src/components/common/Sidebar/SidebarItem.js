@@ -31,28 +31,12 @@ const SidebarItemContainer = styled.div`
   @media (max-width: 1400px) {
     width: 170px;
   }
-  @media (max-width: 1200px) {
+  /* @media (max-width: 1200px) {
     width: 155px;
   }
   @media (max-width: 1000px) {
     width: 145px;
-  }
-  @media (max-width: 800px) {
-    width: 50px;
-    padding: 0 0 0 10px;
-  }
-  @media (max-width: 600px) {
-    width: 50px;
-    padding: 0 0 0 8px;
-  }
-  @media (max-width: 500px) {
-    width: 40px;
-    padding: 0 0 0 6px;
-  }
-  @media (max-width: 400px) {
-    width: 37px;
-    padding: 0 0 0 4px;
-  }
+  } */
 `;
 
 export default function SidebarItem({ name, Icon, active, to, onClick }) {
@@ -63,7 +47,7 @@ export default function SidebarItem({ name, Icon, active, to, onClick }) {
       <CustomLink to={to ?? ""}>
         <SidebarItemContainer active={active}>
           {Icon && <Icon stroke={active ? "#fff" : "#000"} />}
-          {!isTablet && name}
+          {name}
         </SidebarItemContainer>
       </CustomLink>
     </div>

@@ -24,7 +24,7 @@ const Paragraph = styled.p`
     line-height: 22px;
   }
   @media (max-width: 600px) {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 20px;
   }
   @media (max-width: 400px) {

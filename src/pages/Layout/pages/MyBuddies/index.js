@@ -216,12 +216,7 @@ export default function MyBuddies() {
             <Paragraph bold fontSize="24px" color="#000">
               All Buddies
             </Paragraph>
-            <Button
-              width="151px"
-              height="46px"
-              color="#00A652"
-              onClick={addNewBuddy}
-            >
+            <Button color="#00A652" onClick={addNewBuddy}>
               + Add new Buddy
             </Button>
           </Row>

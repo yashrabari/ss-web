@@ -36,8 +36,6 @@ export default function ProductsSection() {
         color="transparent"
         textColor="#000"
         borderRadius="10px"
-        width="271px"
-        height="56px"
         margin="0 0 54px 0"
         onClick={() => navigate("/signup")}
       >

@@ -159,7 +159,7 @@ p{
     flex-wrap: wrap;
   }
   .home_ul_li ul li{
-    font-size: 12px;
+    font-size: 13px;
    }
 }
 
@@ -274,5 +274,24 @@ white-space: nowrap;
   }
   .welcome_flex .title {
     margin-bottom: 0 !important;
+  }
+}
+.mobile_sidebar_btn {
+  display: none;
+  position: absolute;
+    top: 25px;
+} 
+.window_sidebar {
+  display: block;
+}
+.width-185 {
+  width: 185px !important;
+}
+@media (max-width:800px){
+  .window_sidebar {
+    display: none;
+  }
+  .mobile_sidebar_btn {
+    display: block;
   }
 }

@@ -319,12 +319,7 @@ export default function Shared() {
                   <Text>ksdflsjd</Text>
                 </div>
 
-                <Button
-                  width="150px"
-                  height="46px"
-                  color="#00A652"
-                  margin="20px 0 0 0"
-                >
+                <Button color="#00A652" margin="20px 0 0 0">
                   Download
                 </Button>
               </Box>

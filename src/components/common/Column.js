@@ -13,7 +13,8 @@ const Column = styled.div`
   padding: ${(props) => props.padding ?? "0"};
   margin: ${(props) => props.margin ?? "0"};
   box-sizing: border-box;
-  overflow-y: scroll;
+  overflow: auto;
+  position: relative;
   ${(props) =>
     props.hideScrollBar ? "::-webkit-scrollbar {display: none;}" : ""};
   @media (max-width: 1400px) {
@@ -24,14 +25,11 @@ const Column = styled.div`
     width: 70%;
   }
   @media (max-width: 800px) {
-    width: 73%;
+    width: 100%;
+    padding: 0 50px;
   }
   @media (max-width: 500px) {
-    width: 79%;
-    margin: 0 10px;
-  }
-  @media (max-width: 400px) {
-    width: 80%;
+    padding: 0 10px;
   }
 `;
 

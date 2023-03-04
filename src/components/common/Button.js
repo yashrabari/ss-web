@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const Button = styled.button`
-  width: ${(props) => props.width ?? "254px"};
-  height: ${(props) => props.height ?? "60px"};
+  width: ${(props) => props.width ?? "auto"};
+  height: ${(props) => props.height ?? "auto"};
   background: ${(props) => props.color};
   border-radius: ${(props) => props.borderRadius ?? "5px"};
   ${(props) => props.border && "border: 1px solid #000000;"}
@@ -17,30 +17,20 @@ const Button = styled.button`
   font-family: "TT Commons";
   font-size: 18px;
   font-weight: 600;
-
+  padding: 10px 30px;
   margin: ${(props) => props.margin ?? "8px"};
 
   cursor: pointer;
 
   @media (max-width: 1200px) {
-    width: 180px;
-    height: 50px;
     font-size: 17px;
   }
   @media (max-width: 900px) {
-    width: 160px;
-    height: 45px;
     font-size: 15px;
   }
   @media (max-width: 600px) {
-    width: 120px;
-    height: 40px;
     font-size: 12px;
-  }
-  @media (max-width: 400px) {
-    width: 100px;
-    height: 37px;
-    font-size: 11px;
+    padding: 7px 20px;
   }
 `;
 

@@ -154,12 +154,7 @@ export default function Documents() {
       </Row>
       {!Boolean(allFolders.length) && (
         <Row justifyContent="flex-end">
-          <Button
-            width="287px"
-            height="46px"
-            color="#00A652"
-            onClick={() => setOpen(true)}
-          >
+          <Button color="#00A652" onClick={() => setOpen(true)}>
             + Create New Folder
           </Button>
         </Row>
@@ -302,13 +297,7 @@ export default function Documents() {
           </div>
           <Row justifyContent="flex-end">
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <Button
-                width="300px"
-                height="46px"
-                color="#00A652"
-                margin="0"
-                onClick={() => setOpen(true)}
-              >
+              <Button color="#00A652" margin="0" onClick={() => setOpen(true)}>
                 + Create New Folder
               </Button>
               {/* <Row>
@@ -356,12 +345,7 @@ export default function Documents() {
             />
 
             <Row justifyContent="flex-end">
-              <Button
-                width="151px"
-                height="50px"
-                color="#00A652"
-                onClick={HandleCreateFolder}
-              >
+              <Button color="#00A652" onClick={HandleCreateFolder}>
                 Create
               </Button>
             </Row>

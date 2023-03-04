@@ -120,12 +120,7 @@ export default function Landing() {
             }}
             to="/signup"
           >
-            <Button
-              color="#00A652"
-              width="104px"
-              height="48px"
-              borderRadius="8px"
-            >
+            <Button color="#00A652" borderRadius="8px">
               Sign Up
             </Button>
           </CustomLink>
@@ -203,12 +198,7 @@ export default function Landing() {
                   }}
                   to="/signup"
                 >
-                  <Button
-                    color="#00A652"
-                    width="104px"
-                    height="48px"
-                    borderRadius="8px"
-                  >
+                  <Button color="#00A652" borderRadius="8px">
                     Sign Up
                   </Button>
                 </CustomLink>
@@ -241,8 +231,6 @@ export default function Landing() {
           color="transparent"
           textColor="#000"
           borderRadius="10px"
-          width="171px"
-          height="56px"
           // margin="0 0 54px 0"
           onClick={() => navigate("/welcome")}
         >

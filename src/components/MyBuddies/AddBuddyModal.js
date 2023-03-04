@@ -1,11 +1,11 @@
-import React from "react"
-import { useEffect } from "react"
-import { useState } from "react"
-import styled from "styled-components"
-import { postAddBuddy } from "../../api"
-import getBuddy from "../../api/getBudddy"
-import { useModal } from "../../context/modal-context"
-import { addBuddy } from "../../store/actions/Buddies"
+import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+import styled from "styled-components";
+import { postAddBuddy } from "../../api";
+import getBuddy from "../../api/getBudddy";
+import { useModal } from "../../context/modal-context";
+import { addBuddy } from "../../store/actions/Buddies";
 import {
   Button,
   Column,
@@ -13,9 +13,9 @@ import {
   Paragraph,
   Row,
   Select,
-  Title
-} from "../common"
-import AlertModal from "../common/AlertModal"
+  Title,
+} from "../common";
+import AlertModal from "../common/AlertModal";
 
 const Container = styled.div`
   width: 621px;
@@ -26,46 +26,47 @@ const Container = styled.div`
   align-items: center;
   margin: 16px 0;
   padding: 20px;
-`
+`;
 
 export default function AddBuddyModal({ addBuddies, store }) {
-  const { unSetModal } = useModal()
-  const [email, setEmail] = useState("")
-  const [Errors, setErrors] = useState('')
-  const [relation, setRelation] = useState("")
-  const [memberType, setMemberType] = useState("")
-  const [error, setError] = useState("")
-  const [success, setSuccess] = useState(false)
+  const { unSetModal } = useModal();
+  const [email, setEmail] = useState("");
+  const [Errors, setErrors] = useState("");
+  const [relation, setRelation] = useState("");
+  const [memberType, setMemberType] = useState("");
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
   useEffect(() => {
     const unsubscribe = store.subscribe(() => {
-      const addBuddyError = store.getState()?.buddies?.error
-      const addBuddySuccess = store.getState()?.buddies?.success
-      setError(addBuddyError)
-      setSuccess(addBuddySuccess)
-    })
-    return unsubscribe
-  }, [store])
+      const addBuddyError = store.getState()?.buddies?.error;
+      const addBuddySuccess = store.getState()?.buddies?.success;
+      setError(addBuddyError);
+      setSuccess(addBuddySuccess);
+    });
+    return unsubscribe;
+  }, [store]);
   const handleSubmit = () => {
     // console.log('Buddy...:', {email, relationship: relation});
-    const formdata = { email, relationship: relation }
+    const formdata = { email, relationship: relation };
     if (memberType) {
-      formdata['member_type'] = memberType === "General member" ? 1 : 2
+      formdata["member_type"] = memberType === "General member" ? 1 : 2;
     }
-    addBuddies(formdata).unwrap()
+    addBuddies(formdata)
+      .unwrap()
       .then((res) => {
-        store.dispatch(addBuddy())
-        unSetModal()
+        store.dispatch(addBuddy());
+        unSetModal();
       })
       .catch((err) => {
-        console.error(err)
+        console.error(err);
         if (err.response.data.email) {
-          alert(err.response.data.email[0])
+          alert(err.response.data.email[0]);
         }
         if (err.response.data.relationship) {
-          alert(err.response.data.relationship[0])
+          alert(err.response.data.relationship[0]);
         }
-      })
-  }
+      });
+  };
 
   return (
     <Column
@@ -82,14 +83,14 @@ export default function AddBuddyModal({ addBuddies, store }) {
           label="Email of the buddy"
           placeholder="Enter your buddies Email"
           value={email}
-          onChange={e => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <Select
           label="Select relationship"
           placeholder="Select the relationship"
           options={["Marriage partner", "Power of attorney", "other"]}
           value={relation}
-          onChange={e => setRelation(e.target.value)}
+          onChange={(e) => setRelation(e.target.value)}
           margin="0 0 8px"
         />
         <Select
@@ -97,7 +98,7 @@ export default function AddBuddyModal({ addBuddies, store }) {
           placeholder="Select member type"
           options={["General member", "Sub prime"]}
           value={memberType}
-          onChange={e => setMemberType(e.target.value)}
+          onChange={(e) => setMemberType(e.target.value)}
           margin="8px 0"
         />
       </Container>
@@ -111,34 +112,24 @@ export default function AddBuddyModal({ addBuddies, store }) {
           Buddy added successfully
         </Paragraph>
       )}
-      {Errors === 'Enter a valid email address.' && (
+      {Errors === "Enter a valid email address." && (
         <Paragraph width="" color="#FF5F5F">
           {Errors}
         </Paragraph>
       )}
-      {Errors === 'This field may not be blank.' && (
+      {Errors === "This field may not be blank." && (
         <Paragraph width="" color="#FF5F5F">
           Email cannot be blank
         </Paragraph>
       )}
       <Row justifyContent="flex-end">
-        <Button
-          width="151px"
-          height="50px"
-          color="#FBBC05"
-          onClick={handleSubmit}
-        >
+        <Button color="#FBBC05" onClick={handleSubmit}>
           Send Invite Link
         </Button>
-        <Button
-          width="151px"
-          height="50px"
-          color="#00A652"
-          onClick={handleSubmit}
-        >
+        <Button color="#00A652" onClick={handleSubmit}>
           Add Buddy
         </Button>
       </Row>
     </Column>
-  )
+  );
 }

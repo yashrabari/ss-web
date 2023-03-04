@@ -16,10 +16,10 @@ const Title = styled.p`
     margin-bottom: 10px;
   }
   @media (max-width: 900px) {
-    font-size: 23px;
+    font-size: 25px;
   }
   @media (max-width: 600px) {
-    font-size: 20px;
+    font-size: 22px;
   }
 `;
 
