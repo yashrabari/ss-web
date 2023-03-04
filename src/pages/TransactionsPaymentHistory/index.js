@@ -44,7 +44,7 @@ const TransactionsPaymentHistory = () => {
 
   return (
     <>
-      <Row
+      {/* <Row
         width="100%"
         height="73px"
         padding="24px 0"
@@ -55,6 +55,63 @@ const TransactionsPaymentHistory = () => {
         <Row>
           <BackTransactions />
           <Title fontWeight="650" margin="14px 0px 0px 80px">
+            My Transactions
+          </Title>
+        </Row>
+        <Row>
+          <OptionMenuSettings
+            options={[
+              {
+                Icon: people,
+                text: "My Buddies",
+                onClick: () => {
+                  navigate("/home/my-buddies");
+                },
+              },
+              {
+                Icon: Group86,
+                text: "My transactions",
+                onClick: () => {
+                  navigate("/home/transactions");
+                },
+              },
+              {
+                Icon: NotePencil,
+                text: "Send Feedback",
+                onClick: () => {
+                  navigate("/home/send/feedback");
+                },
+              },
+              {
+                Icon: SignOut,
+                text: "Logout",
+                onClick: () => {
+                  dispatch(logout());
+                  navigate("/");
+                },
+              },
+            ]}
+          />
+
+          <IconButton
+            onClick={() => {
+              navigate("/home/notifications");
+            }}
+          >
+            <IoNotificationsOutline size={20} />
+          </IconButton>
+          <Profile user={user} />
+        </Row>
+      </Row> */}
+      <Row
+        padding="15px 24px"
+        alignItems="center"
+        justifyContent="space-between"
+        className="flex_column"
+      >
+        <Row alignItems="center">
+          <BackTransactions />
+          <Title fontWeight="650" margin="8px 0px 0px 60px">
             My Transactions
           </Title>
         </Row>

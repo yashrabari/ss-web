@@ -29,7 +29,7 @@ const Column = styled.div`
     padding: 0 50px;
   }
   @media (max-width: 500px) {
-    padding: 0 10px;
+    padding: 0 15px;
   }
 `;
 

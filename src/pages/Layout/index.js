@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { TbMenu } from "react-icons/tb";
+
 export default function Index() {
   const [show, setShow] = useState(false);
 
@@ -22,7 +23,7 @@ export default function Index() {
       </div>
       <Column width="1170px" margin="0 auto" hideScrollBar>
         <div className="mobile_sidebar_btn">
-          <TbMenu onClick={handleShow} />
+          <TbMenu onClick={handleShow} className="sidebar_icon" />
           {/* <Button variant="primary">Launch</Button> */}
         </div>
         <Outlet />

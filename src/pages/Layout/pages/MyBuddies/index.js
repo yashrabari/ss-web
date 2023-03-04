@@ -35,6 +35,7 @@ import {
 } from "../../../../store/slice/api";
 import LoadingSpinner from "../../../../components/common/LoadingSpinner";
 
+import { MdKeyboardBackspace } from "react-icons/md";
 import styled from "styled-components";
 
 const Row = styled.div`
@@ -148,15 +149,21 @@ export default function MyBuddies() {
   return (
     <>
       <Row
-        width="100% !important"
-        height="73px"
-        padding="24px 0"
+        padding="15px 24px"
         alignItems="center"
         justifyContent="space-between"
-        className="pb-0"
+        className="flex_column"
       >
-        <Title>My Buddies</Title>
-
+        <Row alignItems="center">
+          <MdKeyboardBackspace
+            style={{ cursor: "pointer" }}
+            onClick={() => navigate(-1)}
+            size={25}
+          />
+          <Title fontWeight="650" margin="8px 0px 0px 40px">
+            My Buddies
+          </Title>
+        </Row>
         <Row>
           <OptionMenuSettings
             options={[
@@ -197,7 +204,7 @@ export default function MyBuddies() {
               navigate("/home/notifications");
             }}
           >
-            <IoNotificationsOutline />
+            <IoNotificationsOutline size={20} />
           </IconButton>
         </Row>
       </Row>

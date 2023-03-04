@@ -51,16 +51,14 @@ const Transactions = () => {
   return (
     <>
       <Row
-        width="100%"
-        height="auto"
-        padding="24px 0px 0px 0px"
+        padding="15px 24px"
         alignItems="center"
         justifyContent="space-between"
         className="flex_column"
       >
-        <Row justifyContent="space-between">
+        <Row alignItems="center">
           <BackTransactions />
-          <Title fontWeight="650" margin="14px 0px 0px 60px">
+          <Title fontWeight="650" margin="8px 0px 0px 60px">
             My Transactions
           </Title>
         </Row>
@@ -98,6 +96,7 @@ const Transactions = () => {
               },
             ]}
           />
+
           <IconButton
             onClick={() => {
               navigate("/home/notifications");

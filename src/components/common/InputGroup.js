@@ -153,7 +153,7 @@ export default function InputGroup({
           location.pathname === "/change-password" ||
           location.pathname === "/send-email"
             ? "200px"
-            : "90%"
+            : "100%"
         }
       >
         <InputContainer>

@@ -238,7 +238,7 @@ export default function EditProfile() {
 
   return (
     <>
-      <Row
+      {/* <Row
         width="100%"
         height="73px"
         padding="24px 0"
@@ -294,6 +294,66 @@ export default function EditProfile() {
           </IconButton>
 
           <Profile user={{ imageUrl: profilePicUrl || user?.imageUrl }} />
+        </Row>
+      </Row> */}
+      <Row
+        width="100%"
+        // height="100%"
+        padding="24px 0"
+        alignItems="center"
+        justifyContent="space-between"
+        className="flex_column"
+      >
+        <div className="welcome_flex">
+          <Paragraph color="#000">Welcome, 👋</Paragraph>
+          <Title className="title">
+            {user?.name ? user?.name : "Antor P."}
+          </Title>
+        </div>
+
+        <Row>
+          <OptionMenuSettings
+            options={[
+              {
+                Icon: people,
+                text: "My Buddies",
+                onClick: () => {
+                  navigate("/home/my-buddies");
+                },
+              },
+              {
+                Icon: Group86,
+                text: "My transactions",
+                onClick: () => {
+                  navigate("/home/transactions");
+                },
+              },
+              {
+                Icon: NotePencil,
+                text: "Send Feedback",
+                onClick: () => {
+                  navigate("/home/send/feedback");
+                },
+              },
+              {
+                Icon: SignOut,
+                text: "Logout",
+                onClick: () => {
+                  dispatch(logout());
+                  navigate("/");
+                },
+              },
+            ]}
+          />
+          <IconButton
+            onClick={() => {
+              navigate("/home/notifications");
+            }}
+          >
+            <IoNotificationsOutline size={20} />
+          </IconButton>
+
+          <Profile user={user} />
         </Row>
       </Row>
       <Container margin="100px" padding="70px" borderRadius="20px">

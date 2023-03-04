@@ -59,7 +59,6 @@ const Notifications = () => {
     <>
       <Row
         width="100%"
-        height="73px"
         padding="24px 0"
         alignItems="center"
         justifyContent="space-between"

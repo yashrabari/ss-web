@@ -92,8 +92,7 @@ export const PaymentForm = () => {
   return (
     <>
       <Row
-        height="73px"
-        padding="24px"
+        padding="15px 24px"
         alignItems="center"
         justifyContent="space-between"
         className="flex_column"
@@ -104,7 +103,7 @@ export const PaymentForm = () => {
             onClick={() => navigate(-1)}
             size={25}
           />
-          <Title fontWeight="650" margin="0px 0px 0px 40px">
+          <Title fontWeight="650" margin="6px 0px 0px 20px">
             My Transactions
           </Title>
         </Row>

@@ -100,15 +100,18 @@ export default function Documents() {
   return (
     <>
       <Row
-        width="100%"
-        height="73px"
-        padding="24px 0"
+        padding="15px 24px"
         alignItems="center"
         justifyContent="space-between"
+        className="flex_column"
       >
-        <BackTransactions />
-        <Title margin="8px 0px 0px 60px">Uploaded Folders</Title>
+        <Row alignItems="center">
+          <BackTransactions />
 
+          <Title fontWeight="650" margin="8px 0px 0px 60px">
+            Uploaded Folders
+          </Title>
+        </Row>
         <Row>
           <OptionMenuSettings
             options={[
@@ -143,12 +146,13 @@ export default function Documents() {
               },
             ]}
           />
+
           <IconButton
             onClick={() => {
               navigate("/home/notifications");
             }}
           >
-            <IoNotificationsOutline />
+            <IoNotificationsOutline size={20} />
           </IconButton>
         </Row>
       </Row>
