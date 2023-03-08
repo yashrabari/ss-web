@@ -45,111 +45,111 @@ const routes = [
     path: "/welcome",
     element: <Welcome />
   },
-  {
-    path: "/login",
-    element: <Login />
-  },
-  {
-    path: "/signup",
-    element: <Signup />
-  },
-  {
-    path: "/home",
-    element: <Layout />,
-    routes: [
-      {
-        index: true,
-        element: <Home />
-      },
-      {
-        path: "my-buddies",
-        element: <MyBuddies />
-      },
-      {
-        path: "about",
-        element: <About />
-      },
-      {
-        path: "documents",
-        element: <Documents />
-      },
-      {
-        path: "shared",
-        element: <Shared />
-      },
-      {
-        path: "documents/folder/:id",
-        element: <Folder />
-      },
-      {
-        path: "notifications",
-        element: <Notifications />
-      },
-      {
-        path: "transactions/payment-history",
-        element: <TransactionsPaymentHistory />
-      },
-      {
-        path: "transactions",
-        element: <Transactions />
-      },
-      {
-        path: "transactions/addPaymentMethod",
-        element: <PaymentMethod />
-      },
-      {
-        path: "send/feedback",
-        element: <SendFeedback />
-      },
-      // {
-      //   path: "/transactions/subscriptions",
-      //   element: <Subscriptions />
-      // },
-      {
-        path: "edit-profile",
-        element: <EditProfile />
-      },
-    ]
-  },
-  {
-    path: "/2fa",
-    element: (
-      <VerifyCode twofactor={true} title="Two-Factor Authentication" imageSrc={twoFactorImg} />
-    )
-  },
-  {
-    path: "/send-email",
-    element: (
-      <SendEmail />
-    )
-  },
-  {
-    path: "/verify-forgot-password",
-    element: (
-      <VerifyCode twofactor={false} title="Forgot Password" imageSrc={twoFactorPasswordImg} />
-    )
-  },
-  {
-    path: "/change-password",
-    element: <ChangePassword />
-  },
-  {
-    path: "/create-profile",
-    element: <CreateProfile />
-  },
-  {
-    path: "/subscriptions",
-    routes: [
-      {
-        index: true,
-        element: <Subscriptions />
-      },
-      {
-        path: "payment",
-        element: <Elements stripe={stripePromise}><Payment /></Elements>
-      }
-    ]
-  },
+//   {
+//     path: "/login",
+//     element: <Login />
+//   },
+//   {
+//     path: "/signup",
+//     element: <Signup />
+//   },
+//   {
+//     path: "/home",
+//     element: <Layout />,
+//     routes: [
+//       {
+//         index: true,
+//         element: <Home />
+//       },
+//       {
+//         path: "my-buddies",
+//         element: <MyBuddies />
+//       },
+//       {
+//         path: "about",
+//         element: <About />
+//       },
+//       {
+//         path: "documents",
+//         element: <Documents />
+//       },
+//       {
+//         path: "shared",
+//         element: <Shared />
+//       },
+//       {
+//         path: "documents/folder/:id",
+//         element: <Folder />
+//       },
+//       {
+//         path: "notifications",
+//         element: <Notifications />
+//       },
+//       {
+//         path: "transactions/payment-history",
+//         element: <TransactionsPaymentHistory />
+//       },
+//       {
+//         path: "transactions",
+//         element: <Transactions />
+//       },
+//       {
+//         path: "transactions/addPaymentMethod",
+//         element: <PaymentMethod />
+//       },
+//       {
+//         path: "send/feedback",
+//         element: <SendFeedback />
+//       },
+//       // {
+//       //   path: "/transactions/subscriptions",
+//       //   element: <Subscriptions />
+//       // },
+//       {
+//         path: "edit-profile",
+//         element: <EditProfile />
+//       },
+//     ]
+//   },
+//   {
+//     path: "/2fa",
+//     element: (
+//       <VerifyCode twofactor={true} title="Two-Factor Authentication" imageSrc={twoFactorImg} />
+//     )
+//   },
+//   {
+//     path: "/send-email",
+//     element: (
+//       <SendEmail />
+//     )
+//   },
+//   {
+//     path: "/verify-forgot-password",
+//     element: (
+//       <VerifyCode twofactor={false} title="Forgot Password" imageSrc={twoFactorPasswordImg} />
+//     )
+//   },
+//   {
+//     path: "/change-password",
+//     element: <ChangePassword />
+//   },
+//   {
+//     path: "/create-profile",
+//     element: <CreateProfile />
+//   },
+//   {
+//     path: "/subscriptions",
+//     routes: [
+//       {
+//         index: true,
+//         element: <Subscriptions />
+//       },
+//       {
+//         path: "payment",
+//         element: <Elements stripe={stripePromise}><Payment /></Elements>
+//       }
+//     ]
+//   },
   {
     path: "/privacy-policy",
     element: <PrivacyPolicy />
