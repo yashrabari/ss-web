@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { Brand, Column, Paragraph, Row, Title } from "../../common";
+import { Brand, Paragraph, Row, Title } from "../../common";
 // import Section from "./Section";
 import { ReactComponent as Logo } from "../../../assets/images/Logo.svg";
 import { appStoreImg, googlePlayImg } from "../../../assets/images";
@@ -62,13 +62,18 @@ const Section = styled.section`
   align-items: start;
   grid-template-columns: repeat(4, auto);
 
+  & > div {
+    display: flex;
+    flex-direction: column;
+  }
+
   @media (max-width: 1100px) {
     grid-template-columns: repeat(2, auto);
     padding: 14px 50px;
   }
 
   @media (max-width: 600px) {
-    grid-template-columns: repeat(1, auto);
+    display: block;
     padding: 14px 30px;
   }
 `;
@@ -80,21 +85,12 @@ export default function BottomSection() {
     <Section>
       {/* <Rectangle1 />
       <Rectangle2 /> */}
-      <Column width="100%">
+      <div>
         <Row link alignItems="center" margin="0 0 14px 0">
           <Logo />
           <Brand>S & S Vault</Brand>
         </Row>
-        <Paragraph
-          color="#000"
-          fontSize="14px"
-          // width="262px"
-          textAlign="start"
-          margin="0 0 12px 0"
-        >
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout.
-        </Paragraph>
+
         <Paragraph
           link
           color="#000"
@@ -103,9 +99,9 @@ export default function BottomSection() {
           textAlign="start"
           margin="0 0 17px 0"
         >
-          Get the app!
+          Our App is Coming Soon !
         </Paragraph>
-        <Row>
+        <Row margin="12px 0 12px 0">
           <Image
             src={appStoreImg}
             alt="App Store"
@@ -119,8 +115,8 @@ export default function BottomSection() {
             margin="0"
           />
         </Row>
-      </Column>
-      <Column width="100%">
+      </div>
+      <div width="100%">
         <Title fontSize="22px" textAlign="start" margin="18px 0 12px 0">
           Want to know more?
         </Title>
@@ -167,8 +163,8 @@ export default function BottomSection() {
         >
           Careers
         </Paragraph>
-      </Column>
-      <Column width="100%">
+      </div>
+      <div width="100%">
         <Title fontSize="22px" textAlign="start" margin="18px 0 12px 0">
           More About us
         </Title>
@@ -214,8 +210,8 @@ export default function BottomSection() {
         >
           Terms and Conditions
         </Paragraph>
-      </Column>
-      <Column width="100%">
+      </div>
+      <div width="100%">
         <Title fontSize="22px" textAlign="start" margin="18px 0 12px 0">
           Social Links
         </Title>
@@ -299,7 +295,7 @@ export default function BottomSection() {
             YouTube
           </a>
         </Paragraph>
-      </Column>
+      </div>
     </Section>
   );
 }
