@@ -24,9 +24,8 @@ const Index = () => {
               display="block"
               margin="0 0 16px 0"
             >
-              Store and Share Vault is designed to allow a Prime Account Holder
-              to create a storage account and share the contents of the account
-              with up to (4) Buddies.{" "}
+              An individual will create a Store and Share Vault account, this individual will be known as the
+              Prime Account Holder
             </Paragraph>
           </li>
           <li>
@@ -37,10 +36,10 @@ const Index = () => {
               display="block"
               margin="0 0 16px 0"
             >
-              The Prime Account Holder will determine what information each
-              individual Buddy will have access to. The Prime Account Holder has
-              the ability to grant immediate access or time released access of
-              this information to their Buddies.
+              The Prime Account Holder will upload account information, documents and files they want to
+              securely store in the Store and Share Vault and select an account verification period (1 week to
+              1 month in 1 week increments).
+
             </Paragraph>
           </li>
           <li>
@@ -51,15 +50,63 @@ const Index = () => {
               display="block"
               margin="0 0 16px 0"
             >
-              Store and Share Vault helps to protect your family and loved ones
-              from additional challenges by providing them access to all of your
-              personal confidential accounts, information and documents you
-              choose to upload utilizing the Store and Share Vault. We provide
-              automated forms in the App that will assist you in documenting,
-              saving, and managing login information for bank accounts, merchant
-              accounts, loans, credit cards, and more.
+              The Primary Account Holder will create account login and password storage files utilizing the
+              Store and Share Vault Swift Forms.
+
             </Paragraph>
           </li>
+          <li>
+            <Paragraph
+              textAlign="start"
+              color="#000"
+              width="100%"
+              display="block"
+              margin="0 0 16px 0"
+            >
+              The Primary Account Holder will now create custom folders to store specific file and document
+              types for easy management.
+
+
+            </Paragraph>
+          </li>
+          <li>
+            <Paragraph
+              textAlign="start"
+              color="#000"
+              width="100%"
+              display="block"
+              margin="0 0 16px 0"
+            >
+              The Primary Account Holder will send out Buddy Invitations to up to (4), (7) or (10) Buddies.
+              Once Buddies accept invitation, the Prime Account Holder can then choose specific files,
+              documents and information to be shared with a specific buddy, all buddies or no one.
+
+
+            </Paragraph>
+          </li>
+          <li>
+            <Paragraph
+              textAlign="start"
+              color="#000"
+              width="100%"
+              display="block"
+              margin="0 0 16px 0"
+            >
+              All that’s left to do is manage your files, documents, information and buddies and keep an eye
+              on your account verification period.
+
+            </Paragraph>
+          </li>
+
+          <Paragraph
+            textAlign="start"
+            color="#000"
+            width="100%"
+            display="block"
+            margin="0 0 16px 0"
+          >
+            Enjoy Store and Share Vault.
+          </Paragraph>
           {/* <li>
             <Paragraph textAlign='start' color="#000" width='100%' display="block" margin="0 0 16px 0">
               The Primary Account Holder will now create custom folders to store specific file and document types for easy management

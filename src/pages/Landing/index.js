@@ -221,10 +221,12 @@ export default function Landing() {
           fontSize="20px"
           margin="0 0 21px 0"
         >
-          Store and Share Vault is an encrypted cloud based software created as
-          a safe space for individuals to store all personal and sensitive
-          information and have the ability to share them with a loved one in the
-          event that something happens to them.
+          Do you have important documents, files, photos, videos, personalized messages or other
+          content you would like to store and share in a closed network with only those you invite? Store
+          and Share Vault allows you to securely store your Estate Planning documents, files, account
+          information, photos, videos, files and and other content and share them immediately or on a
+          timed release scheduled with members in your closed network as determined by you.
+
         </Paragraph>
         <Button
           border

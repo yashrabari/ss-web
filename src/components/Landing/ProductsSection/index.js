@@ -25,11 +25,12 @@ export default function ProductsSection() {
         holder.
       </Paragraph>
       <Paragraph width="858px" display="block" margin="0 0 16px 0">
-        Store and Share Vault users will also have access to important personal
-        and family services such as Financial Literacy, Entrepreneurship, Estate
-        Planning, Mental Health Services, Substance Abuse and other services
-        needed to foster personal and family growth. Users will have access to
-        all of these services at no additional cost.
+      Features of Store and Share Vault include a user interface that is easy to understand and use,
+uploaded information can be updated at anytime, new information can be added anytime, you
+will never have to frantically search for information again, you select specific information to be
+shared with specific individuals, and you secure your locate and demonstrate to the next
+generation how to secure theirs.
+
       </Paragraph>
       <Button
         border
