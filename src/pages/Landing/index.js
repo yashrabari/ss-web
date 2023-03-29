@@ -100,30 +100,31 @@ export default function Landing() {
           >
             How it works
           </Paragraph>
-          <CustomLink
+          <a
             style={{
+              textDecoration: "none",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
             }}
-            to="/login"
+            href="https://app.sandsvault.io/login"
           >
             <Paragraph color="#022714" fontSize="18px" margin="auto 20px">
               Login
             </Paragraph>
-          </CustomLink>
-          <CustomLink
+          </a>
+          <a
             style={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
             }}
-            to="/signup"
+            href="https://app.sandsvault.io/signup"
           >
             <Button color="#00A652" borderRadius="8px">
               Sign Up
             </Button>
-          </CustomLink>
+          </a>
         </Row>
         <Row className="block width-0">
           <ImMenu onClick={handleShow} />
