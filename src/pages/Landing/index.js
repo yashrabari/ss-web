@@ -115,6 +115,7 @@ export default function Landing() {
           </a>
           <a
             style={{
+              textDecoration: "none",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
