@@ -56,7 +56,7 @@ const Section = styled.section`
   padding: 14px 50px;
   box-sizing: border-box;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: grid;
   justify-content: space-around;
   align-items: start;

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+
 import { IoNotificationsOutline, IoSettingsOutline } from "react-icons/io5";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
@@ -9,6 +10,9 @@ import {
 } from "../../../../assets/images";
 import {
   Back,
+  Brand,
+  Button,
+  CustomLink,
   // Column,
   Container,
   IconButton,
@@ -27,6 +31,10 @@ import OptionMenuSettings from "../../../../components/common/OptionMenuSettings
 import { useDispatch } from "react-redux";
 import BackTransactions from "../../../TransactionsPaymentHistory/BackTransactions";
 import styled from "styled-components";
+import { BottomSection, Footer, NavBar } from "../../../../components/Landing";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import { ImMenu } from "react-icons/im";
+import { ReactComponent as Logo } from "../../../../assets/images/Logo.svg";
 
 const Image = styled.img`
   width: ${(props) => props.width ?? "-webkit-fill-available"};
@@ -71,6 +79,27 @@ export default function About() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const location = useLocation();
+
+  const handleHomeClick = () => {
+    navigate("/");
+  };
+
+  const handleAboutUsClick = () => {
+    navigate("/about");
+  };
+
+  const handleHowItWorksClick = () => {
+    navigate("/how-it-works");
+  };
+
+  const handleProductsClick = () => {
+    navigate("/products");
+  };
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return location.pathname !== "/about" ? (
     <>
@@ -190,7 +219,162 @@ export default function About() {
     </>
   ) : (
     <Page>
+      <NavBar>
+        <Row link alignItems="center">
+          <Logo />
+          <Brand>S & S Vault</Brand>
+        </Row>
+        <Row margin="" className="none">
+          <Paragraph
+            cursor={"pointer"}
+            color="#022714"
+            fontSize="18px"
+            margin="auto 20px"
+            onClick={handleHomeClick}
+          >
+            Home
+          </Paragraph>
+          <Paragraph
+            onClick={handleAboutUsClick}
+            cursor={"pointer"}
+            color="#02271480"
+            fontSize="18px"
+            margin="auto 20px"
+          >
+            About us
+          </Paragraph>
+          <Paragraph
+            onClick={handleProductsClick}
+            cursor={"pointer"}
+            color="#02271480"
+            fontSize="18px"
+            margin="auto 20px"
+          >
+            Products
+          </Paragraph>
+          <Paragraph
+            onClick={handleHowItWorksClick}
+            cursor={"pointer"}
+            color="#02271480"
+            fontSize="18px"
+            margin="auto 20px"
+          >
+            How it works
+          </Paragraph>
+          <a
+            style={{
+              textDecoration: "none",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            href="https://app.sandsvault.io/login"
+          >
+            <Paragraph color="#022714" fontSize="18px" margin="auto 20px">
+              Login
+            </Paragraph>
+          </a>
+          <a
+            style={{
+              textDecoration: "none",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            href="https://app.sandsvault.io/signup"
+          >
+            <Button color="#00A652" borderRadius="8px">
+              Sign Up
+            </Button>
+          </a>
+        </Row>
+        <Row className="block width-0">
+          <ImMenu onClick={handleShow} />
+          <Offcanvas show={show} onHide={handleClose}>
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title>
+                <Row link alignItems="center">
+                  <Logo />
+                  <Brand>S & S Vault</Brand>
+                </Row>
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+              <Row
+                margin=""
+                flexDirection="column"
+                alignItems="start"
+                gap="10px"
+              >
+                <Paragraph
+                  cursor={"pointer"}
+                  color="#022714"
+                  fontSize="18px"
+                  margin="auto 20px"
+                >
+                  Home
+                </Paragraph>
+                <Paragraph
+                  onClick={handleAboutUsClick}
+                  cursor={"pointer"}
+                  color="#02271480"
+                  fontSize="18px"
+                  margin="auto 20px"
+                >
+                  About us
+                </Paragraph>
+                <Paragraph
+                  onClick={handleProductsClick}
+                  cursor={"pointer"}
+                  color="#02271480"
+                  fontSize="18px"
+                  margin="auto 20px"
+                >
+                  Products
+                </Paragraph>
+                <Paragraph
+                  onClick={handleHowItWorksClick}
+                  cursor={"pointer"}
+                  color="#02271480"
+                  fontSize="18px"
+                  margin="auto 20px"
+                >
+                  How it works
+                </Paragraph>
+                <a
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                  href="https://app.sandsvault.io/login"
+                >
+                  <Paragraph color="#022714" fontSize="18px" margin="auto 20px">
+                    Login
+                  </Paragraph>
+                </a>
+                <a
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                  href="https://app.sandsvault.io/signup"
+                >
+                  <Button color="#00A652" borderRadius="8px">
+                    Sign Up
+                  </Button>
+                </a>
+              </Row>
+            </Offcanvas.Body>
+          </Offcanvas>
+        </Row>
+      </NavBar>
+
       <AboutContainer />
+
+      <BottomSection />
+      <Footer>©2022 All Rights Reserved by S & S Vault</Footer>
     </Page>
   );
 }
@@ -217,10 +401,10 @@ const AboutContainer = () => {
         color="#000"
         margin="10px 0"
       >
-      Store and Share Vault is an Amazon AWS encrypted application created as a safe space for
-individuals to store online account logins, documents, files, photos and videos of any size and
-share them with family member and loved ones should anything happen to them.
-
+        Store and Share Vault is an Amazon AWS encrypted application created as
+        a safe space for individuals to store online account logins, documents,
+        files, photos and videos of any size and share them with family member
+        and loved ones should anything happen to them.
       </Paragraph>
       <Paragraph
         textAlign={location.pathname === "/about" ? "left" : "left"}
@@ -230,12 +414,13 @@ share them with family member and loved ones should anything happen to them.
         color="#000"
         margin="10px 0"
       >
-        Store and Share Vault helps to protect your family and loved ones from additional challenges by
-providing them access to all your personal confidential accounts, information and documents
-you choose to upload utilizing the Store and Share Vault. The Swift Forms we provide within the
-App will assist you in documenting, saving, and managing login information for bank account,
-merchant accounts, loans, credit cards, and more.
-
+        Store and Share Vault helps to protect your family and loved ones from
+        additional challenges by providing them access to all your personal
+        confidential accounts, information and documents you choose to upload
+        utilizing the Store and Share Vault. The Swift Forms we provide within
+        the App will assist you in documenting, saving, and managing login
+        information for bank account, merchant accounts, loans, credit cards,
+        and more.
       </Paragraph>
       <Paragraph
         textAlign={location.pathname === "/about" ? "left" : "left"}
@@ -245,10 +430,11 @@ merchant accounts, loans, credit cards, and more.
         color="#000"
         margin="10px 0"
       >
-       Store and Share Vault users will also have access to important personal and family services
-such as Financial Literacy, Entrepreneurship, Estate Planning, Mental Health Services,
-Substance Abuse and other services needed to further personal and family growth. Users will
-be connect to all of these services through Store and Share Vault
+        Store and Share Vault users will also have access to important personal
+        and family services such as Financial Literacy, Entrepreneurship, Estate
+        Planning, Mental Health Services, Substance Abuse and other services
+        needed to further personal and family growth. Users will be connect to
+        all of these services through Store and Share Vault
       </Paragraph>
       <Row
         margin="10px 0 0 0"
@@ -306,7 +492,7 @@ be connect to all of these services through Store and Share Vault
           />
         </Column>
       </Row>
-    
+
       {location.pathname == "/about" && <Back />}
     </Container>
   );

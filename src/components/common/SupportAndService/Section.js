@@ -17,7 +17,7 @@ const Section = styled.section`
     padding: 50px;
   }
   @media (max-width: 600px) {
-    padding: 30px;
+    padding: 25px;
   }
 `;
 
