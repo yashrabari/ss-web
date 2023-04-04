@@ -26,23 +26,14 @@ import icon5 from "../../assets/images/Newfolder/icon5.jpg";
 
 const Section = styled.section`
   margin-top: 30px;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-around;
+  justify-content: center;
   align-items: start;
-  grid-template-columns: repeat(3, auto);
 
   & > div {
-    display: flex;
-    flex-direction: column;
-  }
-
-  @media (max-width: 1100px) {
-    grid-template-columns: repeat(2, auto);
-  }
-
-  @media (max-width: 600px) {
-    display: block;
+    width: 300px;
   }
 `;
 
